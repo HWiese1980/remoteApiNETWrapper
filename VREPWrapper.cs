@@ -32,6 +32,9 @@ namespace remoteApiNETWrapper
         }
 
         [DllImport("remoteApi.dll")]
+        public static extern simx_error simxSetStringSignal(int clientID, string signalName, string value, int length, simx_opmode opmode);
+
+        [DllImport("remoteApi.dll")]
         public static extern simx_error simxGetStringSignal(int clientID, string signalName, ref IntPtr pointerToValue, ref int signalLength, simx_opmode opmode);
 
         public static string simwGetStringSignal(int clientID, string signalName)
