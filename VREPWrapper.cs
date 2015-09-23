@@ -104,5 +104,11 @@ namespace remoteApiNETWrapper
 
         [DllImport("remoteApi.dll")]
         public static extern simx_error simxGetObjectHandle(int clientID, string objectName, out int handle, simx_opmode opmode);
+
+        [DllImport("remoteApi.dll")]
+        public static extern simx_error simxStartSimulation(int clientID, simx_opmode opmode);
+
+        [DllImport("remoteApi.dll")]
+        public static extern simx_error simxStopSimulation(int clientID, simx_opmode opmode);
     }
 }
